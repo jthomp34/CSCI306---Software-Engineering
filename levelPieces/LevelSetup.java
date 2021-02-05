@@ -89,8 +89,43 @@ public class LevelSetup {
 				}
 			}
 			break;
-			}
+			
 		
+		case 3:
+			board = new Drawable[GameEngine.BOARD_SIZE];
+			movingPieces = new ArrayList<Moveable>();
+			interactingPieces = new ArrayList<GamePiece>();
+			for(int i = 0; i < GameEngine.BOARD_SIZE; ++i) {
+				
+				if(i == 2 || i == 19) {
+					board[i] = new Potato();
+				}
+				else if (i == 8) {
+					Knight knight2 = new Knight('K', "Knight 1", i);
+					interactingPieces.add(knight2);
+					movingPieces.add(knight2);
+					board[i] = knight2;
+							}
+				else if (i == 12) {
+					Hoard hoard2 = new Hoard('H', "Dragon's Hoard", i);
+					interactingPieces.add(hoard2);
+					board[i] = hoard2;
+					
+				}
+				else if (i == 11 || i == 16) {
+					Dragon dragon2 = new Dragon('D', "Dragelle", i);
+					movingPieces.add(dragon2);
+					interactingPieces.add(dragon2);
+					board[i] = dragon2;
+				}
+				else if(i == 5 || i == 10 || i == 20) {
+					Coin coin = new Coin('C', "gold", i);
+					interactingPieces.add(coin);
+					board[i] = coin;
+				}
+			}
+			break;
+			}
 		
 	}
 	
