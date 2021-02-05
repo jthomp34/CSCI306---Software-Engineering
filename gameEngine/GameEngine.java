@@ -28,7 +28,7 @@ public class GameEngine {
 	 * Number of levels defined for this game. GameEngine will automatically play
 	 * each level, starting with 1 through the number specified here.
 	 */
-	public final static int NUM_LEVELS = 2;
+	public final static int NUM_LEVELS = 3;
 	// Keep track of the current level, starting with level 1
 	private int currentLevel = 0;
 	// LevelEngine will create all the data structures for this level
